@@ -32,12 +32,20 @@ ALLOWED_HOSTS = ['.statesecret.site', 'statesecret.herokuapp.com', 'localhost', 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    # ... создание простых flat страниц html через админку
+    'django.contrib.sites',
+    'django.contrib.flatpages',
+    # ...
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# ... создание простых flat страниц html через админку
+SITE_ID = 1
+# ...
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -48,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # ... flatpage
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    # ...
 ]
 
 ROOT_URLCONF = 'statesecret_heroku.urls'
