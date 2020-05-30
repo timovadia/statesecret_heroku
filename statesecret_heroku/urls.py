@@ -19,7 +19,7 @@ from django.urls import path  # For django versions from 2.0 and up
 # подключаем тестовую вьюху (представление) в папке проекта
 from statesecret_heroku.views import hello, main, map
 from django.views import generic
-# from django.contrib.flatpages import views
+from django.contrib.flatpages import views
 
 
 urlpatterns = [
@@ -33,8 +33,8 @@ urlpatterns = [
 
 ]
 
-# urlpatterns += [
-#     path('flat/', views.flatpage, {'url': '/flat/'}, name='flat'),
-#     # path('license/', views.flatpage, {'url': '/license/'}, name='license'),
-# ]
+urlpatterns += [
+    path('flat/', views.flatpage, {'url': '/flat/'}, name='flat'),
+    # path('license/', views.flatpage, {'url': '/license/'}, name='license'),
+]
 
