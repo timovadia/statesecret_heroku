@@ -34,7 +34,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('flat/', views.flatpage, {'url': '/flat/'}, name='flat'),
+    path('info/', views.flatpage, {'url': '/info/'}, name='info'),
     # path('license/', views.flatpage, {'url': '/license/'}, name='license'),
 ]
 
