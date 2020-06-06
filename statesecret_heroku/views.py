@@ -12,7 +12,7 @@ def main(request):
 
 
 def hello(request):
-    return HttpResponse("Здравствуй, Мир!")
+    return HttpResponse("Большой брат приветствует тебя!")
 
 
 def map(request):
